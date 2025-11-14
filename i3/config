@@ -26,8 +26,8 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # launch copy
 exec_always copyq
 
-# run battery low warning
-exec_always --no-startup-id battery&
+# launch flameshot
+exec_always flameshot
 
 # start i3 components
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -84,12 +84,17 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+l exec i3lock
 
 # move workspaces between monitors
-bindsym $mod+b move workspace to output right
+bindsym $mod+b move workspace to output up
 
 # run rofi programs
 bindsym $mod+d exec "rofi -show drun -no-default-config -config ~/.config/rofi/main.rasi"
 bindsym $mod+r exec "rofi -show run -no-default-config -config ~/.config/rofi/main.rasi"
 bindsym $mod+w exec "rofi -show window -no-default-config -config ~/.config/rofi/main.rasi"
+
+# windows rule
+for_window [class="Microsoft Visual Studio 2022"] floating enable
+for_window [class="Microsoft Edge"] floating enable
+for_window [class="File Explorer"] floating enable
 
 # dolphin
 bindsym $mod+e exec "dolphin"
@@ -99,9 +104,8 @@ bindsym Pause exec screenshot -sa
 bindsym Print exec screenshot -sf
 
 # brightness control
-exec_always --no-startup-id light -I
-bindsym XF86MonBrightnessUp exec light -A 2 && light -O && brightness &
-bindsym XF86MonBrightnessDown exec light -U 2 && light -O && brightness &
+bindsym XF86MonBrightnessUp exec brightnessctl s 2+
+bindsym XF86MonBrightnessDown exec brightnessctl s 2-
 
 # audio control
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ && volume &
@@ -172,41 +176,6 @@ client.unfocused #343746 #343746 #F8F8F2 #21222C #21222C
 gaps inner 8
 gaps outer 0
 
-# Press $mod+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+g mode "$mode_gaps"
-
-mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
-
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     gaps inner all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
-
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     gaps outer all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
 exec --no-startup-id libinput-gestures-setup start
+
+exec --no-startup-id xinput set-prop "ASUF1204:00 2808:0104 Touchpad" "libinput Disable While Typing Enabled" 0
