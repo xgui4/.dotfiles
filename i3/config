@@ -39,7 +39,10 @@ exec_always --no-startup-id autotiling
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+q  exec kitty
+bindsym $mod+q exec kitty
+
+# Emoji
+bindsym $mod+Shift+w exec emote
 
 # kill focused window
 bindsym $mod+c kill
@@ -67,7 +70,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+Shift+q layout stacking
-bindsym $mod+Shift+w layout tabbed
+bindsym $mod+Shift+t layout tabbed
 bindsym $mod+Shift+e layout toggle split
 
 # save and restore layout with i3-resurrect
@@ -87,9 +90,9 @@ bindsym $mod+l exec i3lock
 bindsym $mod+b move workspace to output up
 
 # run rofi programs
-bindsym $mod+d exec "rofi -show drun -no-default-config -config ~/.config/rofi/main.rasi"
-bindsym $mod+r exec "rofi -show run -no-default-config -config ~/.config/rofi/main.rasi"
-bindsym $mod+w exec "rofi -show window -no-default-config -config ~/.config/rofi/main.rasi"
+bindsym $mod+d exec "rofi -show drun"
+bindsym $mod+r exec "rofi -show run"
+bindsym $mod+w exec "rofi -show window"
 
 # windows rule
 for_window [class="Microsoft Visual Studio 2022"] floating enable
@@ -170,12 +173,12 @@ client.focused #0000FF #00008B #90D5FF #57B9FF #77B1D4
 client.focused_inactive #343746 #343746 #F8F8F2 #21222C #21222C
 client.unfocused #343746 #343746 #F8F8F2 #21222C #21222C
 
-### SETTINGS FOR i3-gaps ###
+### SETTINGS FOR GAPS ###
 
 # Set inner/outer gaps
 gaps inner 8
 gaps outer 0
-
+    
 exec --no-startup-id libinput-gestures-setup start
 
 exec --no-startup-id xinput set-prop "ASUF1204:00 2808:0104 Touchpad" "libinput Disable While Typing Enabled" 0
