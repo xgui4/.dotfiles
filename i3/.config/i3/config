@@ -17,17 +17,17 @@ exec_always --no-startup-id picom &
 exec_always --no-startup-id dunst &
 
 # set wallpaper with feh
-exec_always feh --bg-fill ~/.config/wallpapers/wallpaper.jpeg
+exec_always feh --bg-fill ~/.dotfiles/wallpapers/wallpaper-cirno1.jpeg
 
 # launch polybar
 exec_always --no-startup-id killall -q
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # launch copy
-exec_always copyq
+exec_once copyq
 
 # launch flameshot
-exec_always flameshot
+exec_once flameshot
 
 # start i3 components
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork

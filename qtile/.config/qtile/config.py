@@ -254,7 +254,7 @@ screens = [
              #border_color= ["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"]
         ),
         background="#000000",
-        wallpaper="~/Pictures/wallpaper/v5t6bi.png",
+        wallpaper="~/dotfiles/wallpaper/wallpaper-cirno2.png",
         wallpaper_mode="center",
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling

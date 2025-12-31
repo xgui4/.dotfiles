@@ -16,6 +16,6 @@ cp -a .config/ ~/.config-backup/
 
 mkdir ~/.config
 
-cp -a fastfetch/ fish/ gtk-3.0/ gtk-4.0/ hypr/ i3/ kitty/ nwg-look/ picom/ polybar/ qt5ct/ qtile/ rofi/ wallpapers/ waybar/ ~/.config/ 
+echo "I needed to rewrite the installer, it won't work for now"
 
 echo "This script is still not finished, some must be put manually for now"
