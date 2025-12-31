@@ -1,111 +1,139 @@
 {
-  "layer": "top",
-  "position": "top",
-  "height": 20,
-  "spacing": 2,
-  "exclusive": true,
-  "gtk-layer-shell": true,
-  "passthrough": false,
-  "fixed-center": true,
-  "modules-left": ["custom/wofi", "hyprland/workspaces", "hyprland/window"],
-  "modules-center" : ["cpu", "memory", "temperature",  "privacy"],
-  "modules-right": [
-    "pulseaudio",
-    "battery",
-    "backlight",
-    "clock",
-    "clock#simpleclock",
-    "mpris",
-    "custom/notification",
-    "tray",
-  ],
-  "hyprland/workspaces": {
-    "on-click": "activate",
-    "format": "{id}",
-    "all-outputs": true,
-    "disable-scroll": false,
-    "active-only": false,
-  },
-  "hyprland/window": {
-    "format": "{title}",
-  },
-  "tray": {
-    "show-passive-items": true,
-    "spacing": 10,
-  },
-  "clock#simpleclock": {
-    "tooltip": false,
-    "format": " {:%H:%M}",
-  },
-  "clock": {
-    "format": " {:L%a %d %b}",
-    "calendar": {
-      "format": {
-        "days": "<span weight='normal'>{}</span>",
-        "months": "<span color='#cdd6f4'><b>{}</b></span>",
-        "today": "<span color='#f38ba8' weight='700'><u>{}</u></span>",
-        "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
-        "weeks": "<span color='#a6e3a1'><b>W{}</b></span>",
-      },
-      "mode": "month",
-      "mode-mon-col": 1,
-      "on-scroll": 1,
+    "layer": "top",
+    "position": "top",
+    "height": 20,
+    "modules-left": [
+        "custom/launcher", 
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "temperature", 
+        "cpu",
+        "memory"
+    ],
+    "modules-right": [
+        "tray",
+        "backlight",
+        "pulseaudio",
+        "clock",
+        "battery",
+        "custom/power"
+    ],
+    
+    "hyprland/workspaces": {
+        "format": "{icon}"
     },
-    "tooltip-format": "<span color='#cdd6f4' font='Lexend 16'><tt><small>{calendar}</small></tt></span>",
-  },
-  	"battery": {
-        	"states": {
-            		"warning": 30,
-            		"critical": 15
-        	},
-        	"format": "{icon} {capacity}%",
-        	"format-charging": "\udb84\udea5{capacity}%",
-        	"format-plugged": "\udb84\udea5{capacity}%",
-        	"format-alt": "{time} {icon}",
-        	"format-full": "\udb80\udc79 {capacity}%",
-        	"format-icons": ["", "", ""]
-	},
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "  muted",
-    "format-icons": {
-      "headphone": "",
-      "default": [" ", " ", " "],
+    
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 50,
+        "separate-outputs": true
     },
-    "on-click": "pavucontrol",
-  },
-  "backlight": {
-	"format": "{icon} {percent}%",
-	"format-icons": ["󰃠", "󰃞"]
-  },
-  "custom/notification": {
-    "escape": true,
-    "exec": "swaync-client -swb",
-    "exec-if": "which swaync-client",
-    "format": "notif",
-    "format-icons": {
-      "none": "󰅺",
-      "notification": "󰡟",
+    
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%A, %B %d, %Y (%R)}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
     },
-    "on-click": "sleep 0.1 && swaync-client -t -sw",
-    "return-type": "json",
-    "tooltip": false,
-  },
-  "custom/wofi": {
-    "format": "♾️",    
-    "on-click": "exec wofi --show drun", 
-    "on-click-right": "exec wofi --show run"
-  },
-}
-"mpris": {
-	"format": "DEFAULT: {player_icon} {dynamic}",
-	"format-paused": "DEFAULT: {status_icon} <i>{dynamic}</i>",
-	"player-icons": {
-		"default": "▶",
-		"mpv": "🎵"
-	},
-	"status-icons": {
-		"paused": "⏸"
-	},
-	// "ignored-players": ["firefox"]
+    
+    "tray": {
+        "icon-size": 18,
+        "spacing": 8
+    },
+    
+    "cpu": {
+        "format": " {usage}%",
+        "format-alt": " {avg_frequency} GHz",
+        "interval": 1,
+        "tooltip": true,
+        "tooltip-format": "CPU Usage: {usage}%\nAverage Frequency: {avg_frequency} GHz\nLoad: {load}"
+    },
+    
+    "memory": {
+        "format": " {percentage}%",
+        "format-alt": " {used:0.1f}G/{total:0.1f}G",
+        "interval": 1,
+        "tooltip": true,
+        "tooltip-format": "Memory Usage: {percentage}%\nUsed: {used:0.2f} GB\nAvailable: {avail:0.2f} GB\nTotal: {total:0.2f} GB"
+    },
+
+    "temperature": {
+        "critical-threshold": 80, 
+        "format": "{icon} {temperatureC}°C {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "scroll-step": 5,
+        "smooth-scrolling-threshold": 1,
+        "tooltip": true,
+        "tooltip-format": "Brightness: {percent}%",
+        "on-scroll-up": "brightnessctl set 5%+",
+        "on-scroll-down": "brightnessctl set 5%-"
+    },
+    
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁 Muted",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "󱡏",
+            "headset": "󰋎",
+            "phone": "󰏲",
+            "portable": "󰦧",
+            "car": "󰄋",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+    
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰚥 {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    
+    "custom/launcher": {
+        "format": "♾️",
+        "tooltip": false,
+        "on-click": "rofi -show drun"
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "rofi -show powermenu:~/.config/hypr/rofi-power-menu"
+    }
 }
