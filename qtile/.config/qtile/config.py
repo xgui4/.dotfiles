@@ -225,8 +225,8 @@ screens = [
              #border_color= ["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"]
         ),
         background="#000000",
-        wallpaper="~/Pictures/wallpaper/v5t6bi.png",
-        wallpaper_mode="center",
+        wallpaper="~/.dotfiles/wallpapers/wallpaper-cirno1.jpeg6",
+        wallpaper_mode="fill",
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling
         # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
@@ -254,8 +254,8 @@ screens = [
              #border_color= ["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"]
         ),
         background="#000000",
-        wallpaper="~/dotfiles/wallpaper/wallpaper-cirno2.png",
-        wallpaper_mode="center",
+        wallpaper="~/.dotfiles/wallpapers/wallpaper-cirno2.png",
+        wallpaper_mode="fill",
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling
         # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second

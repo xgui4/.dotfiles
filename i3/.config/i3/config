@@ -73,6 +73,9 @@ bindsym $mod+Shift+q layout stacking
 bindsym $mod+Shift+t layout tabbed
 bindsym $mod+Shift+e layout toggle split
 
+bindsym $mod+Shifts move scratchpad
+bindsym $mod+s scratchpad show
+
 # save and restore layout with i3-resurrect
 bindsym $mod+t  exec --no-startup-id i3-resurrect restore
 bindsym $mod+y  exec --no-startup-id i3-resurrect save
