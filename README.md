@@ -5,3 +5,25 @@ My dotfiles of my GNU/Linux System, including HyprArch (my hyprland setup) and i
 ## How to use
 
 `scripts/installer.sh` : install the essential packages and a CLI helper to install the dotfile with Git Stow.
+
+### to install the dotfiles
+
+> [!WARNING]
+> This could override your config, so make sure you backup your .dotfiles first!
+
+0. (Optional) Use the configure.sh file to install the neccesary packages
+1. Put the git repo in `home/<your username>/.dotfiles`
+2. Backup your .config folder
+3. `git stow --adopted <package>` you want to install
+4. Keep the folder
+
+### to update the dotfiles manually
+
+> [!WARNING]
+> This could override your config, so make sure you backup your .dotfiles first!
+
+```bash
+
+git pull
+
+```
