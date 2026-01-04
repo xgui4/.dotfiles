@@ -1,5 +1,8 @@
 # Xgui4 OS Dotfiles
 
+> [!NOTE]
+> This branch is my personal config who change often for stability the xgui4-os/.dotfiles is prefered or a other dotfiles made for daily use.
+
 My dotfiles of my GNU/Linux System, including HyprArch (my hyprland setup) and i3wm and qtile config and terminal config and a work in progress installer.
 
 ## How to use
@@ -8,7 +11,7 @@ My dotfiles of my GNU/Linux System, including HyprArch (my hyprland setup) and i
 
 ### to install the dotfiles
 
-> [!WARNING]
+> [!CAUTION]
 > This could override your config, so make sure you backup your .dotfiles first!
 
 0. (Optional) Use the configure.sh file to install the neccesary packages
@@ -19,7 +22,7 @@ My dotfiles of my GNU/Linux System, including HyprArch (my hyprland setup) and i
 
 ### to update the dotfiles manually
 
-> [!WARNING]
+> [!CAUTION]
 > This could override your config, so make sure you backup your .dotfiles first!
 
 ```bash

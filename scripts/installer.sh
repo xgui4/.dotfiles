@@ -1,5 +1,13 @@
 #!/usr/bin/sh
 
+echo "WARNING: this script is a work in progress and have not being tested"
+
+read -o -p "Do you want to continue? (Y/N)" continue
+
+if ($continue != Y); then
+  exit("User have decided to not continue")
+fi
+
 echo "Xgui4 OS Dotfiles Installer - Prototype 2 Version"
 
 echo "List of Operating System available?"
@@ -10,8 +18,6 @@ echo "2. FreeBSD"
 read -o -p 'What is your Operating System??' operating_system
 
 if $operating_system == "1"; then
-  echo "WARNING: this script is a work in progress and have not being tested"
-
   echo "First, do you want a XLibre or Xorg for an X server?"
 
   read -o -p 'So Do you want to Install XLibre ? (Y/N) ?' confirm_xlibre
@@ -55,8 +61,6 @@ if $operating_system == "1"; then
 fi
 
 else 
-  echo "WARNING: this script is a work in progress and have not being tested"
-
   echo "Do you want to install an X11 Server for an X11 Window Manager?"
 
   read -o -p 'Do you want to install an X11 Server for an X11 Window Manager? (Y/N)' confirm_x11
