@@ -1,0 +1,7 @@
+{
+  "pacman": [
+    "i3wm",
+    "polybar",
+    "i3lock-color"
+  ]
+}

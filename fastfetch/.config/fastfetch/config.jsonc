@@ -1,0 +1,106 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source" : "~/.config/fastfetch/fastfetch.txt",
+    "width" : 30,
+    "height" : 20,
+    "color" : {
+    "1" : "blue",
+    "2" : "red",
+    "3" : "yellow",
+    "4" : "green"
+  }
+  },
+    "modules": [
+        "break",
+        {
+            "type": "title",
+            "keyWidth": 10,
+        },
+        {
+            "type":"host",
+            "keyColor" : "magenta"
+        },
+        {
+            "type": "os",
+            "keyColor": "magenta",
+        },
+        {
+            "type": "kernel",
+            "keyColor": "blue",
+        },
+        {
+            "type": "packages",
+            "keyColor": "light_blue",
+        },
+        {
+            "type": "shell",
+            "keyColor": "green",
+        },
+        {
+            "type": "terminal",
+            "keyColor": "yellow",
+        },
+        {
+            "type": "wm",
+            "keyColor": "38;2;252;148;3",
+        },
+        {
+            "type": "Theme",
+            "keyColor": "38;2;252;148;3",
+        },
+        {
+            "type": "de",
+            "keyColor": "38;2;252;148;3",
+        },
+        {
+            "type": "cursor",
+            "keyColor": "red",
+        },
+        {
+            "type": "terminalfont",
+            "keyColor": "magenta",
+        },
+        {
+            "type": "uptime",
+            "keyColor": "blue",
+        },
+        {
+            "type": "media",
+            "keyColor": "light_blue",
+        },
+        {
+           "type": "cpu",
+           "keyColor" : "green"
+        },
+        {
+           "type": "gpu",
+           "keyColor" : "yellow"
+        },
+        {
+            "type": "memory",
+            "key": " RAM:",
+            "keyColor": "38;2;252;148;3"
+        },
+        {
+            "type": "swap",
+            "key": " Swap:",
+            "keyColor": "38;2;252;148;3"
+        },
+        {
+           "type": "disk",
+           "keyColor": "red"
+        },
+        {
+          "type" :"battery",
+          "keyColor": "magenta"
+        },
+        {
+         "type" : "processes",
+         "keyColor": "magenta"
+        },
+        "monitor",
+        "colors",
+        "break"
+    ]
+}

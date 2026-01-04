@@ -1,0 +1,18 @@
+{
+  "pkg" :[
+    "stow",
+    "dolphin",
+    "picom",
+    "kitty",
+    "fastfetch",
+    "flameshot",
+    "nwg-look",
+    "networkmgr",
+    "copyq",
+    "rofi",
+    "fish",
+    "starship",
+    "qt5c",
+    "qt6c"
+    ]
+}

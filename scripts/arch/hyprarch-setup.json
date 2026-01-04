@@ -1,0 +1,13 @@
+{
+    "pacman" : [
+    "hyprland",
+    "waybar",
+    "hyprpaper",
+    "hyprlock",
+    "hypridle",
+    "hyprshot"
+    ],
+    "aur" : [
+        "hyprshell"
+    ]
+}
