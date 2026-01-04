@@ -1,0 +1,17 @@
+# CHANGELOG
+
+## Protoype 2
+
+- Experiment with
+  - X11 Windows Managers
+  - Fish Shell + Starship
+  - GNU Stow
+  - Restructure with GNU Stow
+- Scripts moved to scripts
+- Wofi replaced with Rofi for Hyprland
+- Added missing packages config/dotfiles
+- Reworked `installer.sh`
+- JSON File for list of program to install for modurality
+- Added/Updated Code of Respect to its latest version
+- Added initial FreeBSD Support for the installer
+- Updated the `README.md`
