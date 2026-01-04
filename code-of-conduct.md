@@ -15,7 +15,7 @@
 
 ## Inclusivity and Professionalism
 
-## You are welcome here
+### You are welcome here
 
 This mean you are to welcome to contribute and be a part of the community regardless
 of your identity, sex/gender, ethnicity, religion, disability, neurodivergence, background,

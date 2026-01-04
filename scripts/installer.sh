@@ -1,21 +1,89 @@
-#!/usr/bin/bash
+#!/usr/bin/sh
 
 echo "Xgui4 OS Dotfiles Installer - Prototype 2 Version"
 
-# Variables
-RED="\e[31m"
-ENDCOLOR="\e[0m"
+echo "List of Operating System available?"
 
-echo "This bash script is experimental and a work-in-progress !"
+echo "1. Arch based OS"
 
-# installer for stuff temporaly removed as it was obselete
+echo 2. 
 
-mkdir ~/.config-backup
+read -o -p 'What is your Operating System??' operating_system
 
-cp -a .config/ ~/.config-backup/
+if $operating_system == "1"; then
+  echo "WARNING: this script is a work in progress and have not being tested"
 
-mkdir ~/.config
+  echo "First, do you want a XLibre or Xorg for an X server?"
 
-echo "I needed to rewrite the installer, it won't work for now"
+  read -o -p 'So Do you want to Install XLibre ? (Y/N) ?' confirm_xlibre
+  if [[ $confirm_xlibre == "Y" || $confirm_xlibre == "y" ]]; then
+    curl -O https://x11libre.net/repo/arch_based/x86_64/install-xlibre.sh 
+    sudo chmod +x install-xlibre.sh
+    sudo ./install-xlibre.sh || echo -e "${RED}[Error]${ENDCOLOR} XLibre installation script has failed."
+  fi
 
-echo "This script is still not finished, some must be put manually for now"
+  else  
+    sudo pacman -S xorg-server;
+  fi
+
+  # Define the JSON file
+  ARCH="arch/arch-essential-pkg.json"
+  I3="arch/i3-setup.json"
+  HYPRARCH="arch/hyprarch-setup.json"
+  QTILE="arch/qtile-setup.json"
+
+  packages=($(jq -r '.pacman[]' "$ARCH"))
+  sudo pacman -S ${packages[@]}
+
+  aur=($(jq -r '.aur[]' "$ARCH"))
+  yay -S ${aur[@]}
+
+  packages=($(jq -r '.pacman[]' "$I3"))
+  sudo pacman -S ${packages[@]}
+
+  packages=($(jq -r '.pacman[]' "$HYPRARCH"))
+  sudo pacman -S ${packages[@]}
+
+  aur=($(jq -r '.aur[]' "$HYPRARCH"))
+  yay -S ${aur[@]}
+
+  packages=($(jq -r '.pacman[]' "$QTILE"))
+  sudp pacman -S ${packages[@]}
+
+  aur=($(jq -r '.aur[]' "$QTILE"))
+  yay -S ${aur[@]}
+
+fi
+
+else 
+   echo "WARNING: this script is a work in progress and have not being tested"
+
+  echo "Do you want to install an X11 Server for an X11 Window Manager?"
+
+  read -o -p 'Do you want to install an X11 Server for an X11 Window Manager? (Y/N)' confirm_x11
+  if [[ $confirm_x11 == "Y" || $confirm_x11 == "y" ]]; then
+    sudo pkg install xorg-server
+  fi
+
+  # Define the JSON file
+  eseential="freebsd/freebsd-essential-pkg.json"
+  I3="arch/i3-setup.json"
+
+  packages=($(jq -r '.pacman[]' "$es"))
+  sudo pacman -S ${packages[@]}
+
+  packages=($(jq -r '.pacman[]' "$I3"))
+  sudo pacman -S ${packages[@]}
+
+  packages=($(jq -r '.pacman[]' "$HYPRARCH"))
+  sudo pacman -S ${packages[@]}
+
+  aur=($(jq -r '.aur[]' "$HYPRARCH"))
+  yay -S ${aur[@]}
+
+  packages=($(jq -r '.pacman[]' "$QTILE"))
+  sudp pacman -S ${packages[@]}
+
+  aur=($(jq -r '.aur[]' "$QTILE"))
+  yay -S ${aur[@]}
+fi 

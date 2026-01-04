@@ -8,6 +8,7 @@ if status is-interactive
     alias wkill="hyprctl kill"
     alias neofetch="fastfetch -c neofetch"
     alias cmatrix-rainbow="cmatrix | lolcat"
+    alias edit="code"
 end
 
 function mkcd --description "Create a directory and cd into it"

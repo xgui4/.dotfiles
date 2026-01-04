@@ -13,7 +13,6 @@ border-radius: 8px;
     font-weight: 500;
 }
 
-
 window#waybar {
     background: linear-gradient(135deg, rgba(30, 30, 46, 0.85), rgba(24, 24, 37, 0.85));
 	background:transparent; 
@@ -256,4 +255,3 @@ tooltip label {
     color: #cdd6f4;
     padding: 1px 4px;
 }
-

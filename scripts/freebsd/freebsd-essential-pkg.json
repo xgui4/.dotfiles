@@ -1,22 +1,18 @@
 {
-    "pacman" :[
+  "pkg" :[
+    "stow",
     "dolphin",
     "picom",
     "kitty",
     "fastfetch",
     "flameshot",
     "nwg-look",
-    "network-manager-applet",
-    "blueman-manager",
+    "networkmgr",
     "copyq",
     "rofi",
     "fish",
     "starship",
-    "stow"
-    ],
-    
-    "aur" : [
-    "qt5c-kde",
-    "qt6c-kde"
+    "qt5c",
+    "qt6c"
     ]
 }
