@@ -12,7 +12,7 @@ My dotfiles of my GNU/Linux System, including HyprArch (my hyprland setup) and i
 > [!CAUTION]
 > This could override your config, so make sure you backup your .dotfiles first!
 
-0. (Optional) Use the `scripts/installer.sh`  file to install the neccesary packages
+0. (Optional) Use the `scripts/installer.sh` file to install the neccesary packages
 1. Put the git repo in `home/<your username>/.dotfiles`
 2. Backup your .config folder
 3. `git stow --adopted <package>` you want to install
