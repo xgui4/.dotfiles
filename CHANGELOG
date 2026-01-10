@@ -1,9 +1,11 @@
 # CHANGELOG
 
-## Each line correspeond to a pull request to the master branch (no date -> not yet merged/created : still in dev)
+## Each line correspeond to a pull request to the master branch (no date -> not yet merged/created : still in dev branch)
 
 ## BSD-Tested
 
+- Experiments
+  - BSD Support
 - Will tested in on BSD
 - Focus on BSD
 
