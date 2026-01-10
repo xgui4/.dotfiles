@@ -8,8 +8,9 @@
   - BSD Support
 - Will tested in on BSD
 - Focus on BSD
-- Remove index.theme , since it is a wrriten by nwg-look, but added a index.default.theme to add index.default.theme to create it.
+- Remove `index.theme` , since it is a wrriten by nwg-look, but added a index.default.theme to add `index.default.theme` to create it.
 - Make the scripts POISX compatible for better BSD support (no longer requiring BASH) and now SH instead of BASH
+- Now `save-rice.sh` is now `save-toolkit-theme.sh`and now longer does the sh
 
 ## Protoype 2 - 2026-01-9
 

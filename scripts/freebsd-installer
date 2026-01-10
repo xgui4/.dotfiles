@@ -1,0 +1,19 @@
+printf "Do you want to install an X11 Server for an X11 Window Manager? (Y/N)")
+read -r confirm_x11
+if [ $confirm_x11 = "Y"] || [ $confirm_x11 = "y" ]; then
+sudo pkg install -y xorg-server
+fi
+
+# Define the JSON file
+ESSENTIAL="freebsd/freebsd-essential-pkg.json"
+I3="freebsd/i3-setup.json"
+
+packages=$(jq -r '.pkg[]' "$ESSENTIAL")
+sudo pkg install -y $packages
+
+packages=$(jq -r '.pkg[]' "$I3")
+sudo pkg install -y $packages
+
+cd ~/.dotfiles
+
+stow --adopt fastfetch fish gtk i3 kitty libinput-gestures kitty picom polybar qt rofi starship wallpapers xsettings

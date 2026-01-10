@@ -20,9 +20,9 @@ if [ "$_stow" = "yes" ] || [ "$_stow" = "Yes" ]; then
     DOT_DIR="$HOME/.dotfiles"
 
     setup_stow_pkg() {
-        local pkg="$1"
-        local file_path="$2"
-        local dir_in_pkg="$DOT_DIR/$pkg/$(dirname "$file_path")"
+        pkg="$1"
+        file_path="$2"
+        dir_in_pkg="$DOT_DIR/$pkg/$(dirname "$file_path")"
         
         mkdir -p "$dir_in_pkg"
         mv "$HOME/$file_path" "$dir_in_pkg/"
@@ -37,7 +37,6 @@ if [ "$_stow" = "yes" ] || [ "$_stow" = "Yes" ]; then
     setup_stow_pkg "qt" ".config/Kvantum/kvantum.kvconfig"
 
     echo "Ricing moved to $DOT_DIR and symlinked via Stow."
-    cd "$DOT_DIR" && stow --adopt gtk qt
 else
     echo "Program has exited. Reason: Cancelled operation."
     exit 0
