@@ -1,6 +1,13 @@
 # CHANGELOG
 
-## Protoype 2
+## Each line correspeond to a pull request to the master branch (no date -> not yet merged/created : still in dev)
+
+## BSD-Tested
+
+- Will tested in on BSD
+- Focus on BSD
+
+## Protoype 2 - 2026-01-9
 
 - Experiment with
   - X11 Windows Managers
