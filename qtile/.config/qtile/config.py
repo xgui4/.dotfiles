@@ -32,7 +32,6 @@ import subprocess
 from libqtile import bar, layout, qtile, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
 from qtile_extras.layout.decorations import GradientBorder, RoundedCorners
 
 mod = "mod4"
@@ -59,7 +58,8 @@ keys = [
     Key([mod, "control"], "Right", lazy.layout.grow_right(), desc="Grow window to the right"),
     Key([mod, "control"], "Down", lazy.layout.grow_down(), desc="Grow window down"),
     Key([mod, "control"], "Up", lazy.layout.grow_up(), desc="Grow window up"),
-    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+    Key([mod], "n", lazy.spawn("zen-browser")),
+    Key([mod, "shift"], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
@@ -74,7 +74,7 @@ keys = [
     Key([mod], "d", lazy.spawn("rofi -show drun"), desc="Launchin Rofi in drun mode"),
     Key([mod], "q", lazy.spawn(terminal), desc="Launch terminal"),
     # Toggle between different layouts as defined below
-    Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+    Key([mod], "k", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "c", lazy.window.kill(), desc="Kill focused window"),
     Key(
         [mod],
@@ -99,8 +99,9 @@ keys = [
     Key([], "XF86AudioNext", lazy.spawn("playerctl next"), desc="Skip to next"),
     Key([], "XF86AudioPrev", lazy.spawn("playerctl previous"), desc="Skip to previous"),
     
-    Key([], "Print", lazy.spawn("flameshot gui"), desc="Screenshot tool")
+    Key([], "Print", lazy.spawn("flameshot gui"), desc="Screenshot tool"),
 ]
+
 
 # Add key bindings to switch VTs in Wayland.
 # We can't check qtile.core.name in default config as it is loaded before qtile is started
@@ -114,7 +115,6 @@ for vt in range(1, 8):
             desc=f"Switch to VT{vt}",
         )
     )
-
 
 groups = [Group(i) for i in "123456789"]
 
@@ -144,53 +144,97 @@ for i in groups:
 
 layouts = [
     layout.Columns(
-        border_width=4,
-        border_focus= GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"])
+        border_width=6,
+        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
+        use_mask=True)),
+        paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
+        margin= 4
     ), 
     layout.Max(
-        border_width=4,
-        border_focus= GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"])
+        border_width=6,
+        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
+        use_mask=True)),
+        margin= 4
     ),
     layout.Stack(
         num_stacks=2,
-        border_width=4,
-        border_focus= GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"])
+        border_width=6,
+        paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
+        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
+        use_mask=True)),
+        margin= 4
     ),
     layout.Bsp(
-        border_width=4,
-        border_focus= GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"])
+        border_width=6,
+        paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
+        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
+        use_mask=True)),
+        border_normal="#222222",
+        margin= 4
     ),
     layout.Matrix(
-        border_width=4,
-        border_focus= GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"])
+        border_width=6,
+        paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
+        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
+        use_mask=True)),
+        border_normal="#000000",
+        margin= 4
     ),
     layout.MonadTall(
-        border_width=4,
-        border_focus= GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"])
+        border_width=6,
+        paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
+        border_normal="#000000",
+        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
+        use_mask=True)),
+        margin= 4
     ),
     layout.MonadWide(
-        border_width=4,
-        border_focus= GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"])
+        border_width=6,
+        paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
+        border_normal="#000000",
+        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
+        use_mask=True)),
+        margin= 4
     ),
     layout.RatioTile(
-        border_width=4,
-        border_focus= GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"])
+        border_width=6,
+        paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
+        border_normal="#000000",
+        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
+        use_mask=True)),
+        margin= 4
     ),
     layout.Tile(
-        border_width=4,
-        border_focus= GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"])
+        border_width=6,
+        paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
+        border_normal="#000000",
+        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
+        use_mask=True)),
+        margin= 4
     ),
     layout.TreeTab(
-        border_width=4,
-        border_focus= GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"])
+        border_width=6,
+        border_normal="#000000",
+        paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
+        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
+        use_mask=True)),
+        margin= 4
     ),
     layout.VerticalTile(
-        border_width=4,
-        border_focus= GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"])
+        border_width=6,       
+        border_normal="#000000",
+        paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
+        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
+        use_mask=True)),
+        margin= 4
     ),
     layout.Zoomy(
-        border_width=4,
-        border_focus= GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"])
+        border_width=6,        
+        border_normal="#000000",
+        paddings=2, # Padding pushes the gradient inward so Picom doesn't clip it
+        border_focus= RoundedCorners(GradientBorder(colours=["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"], # This pushes the border away from the edge so Picom doesn't eat it
+        use_mask=True)),
+        margin= 4
     ),
 ]
 
@@ -225,7 +269,7 @@ screens = [
              #border_color= ["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"]
         ),
         background="#000000",
-        wallpaper="~/.dotfiles/wallpapers/wallpaper-cirno1.jpeg6",
+        wallpaper="~/.dotfiles/wallpapers/wallpaper-cirno1.jpeg",
         wallpaper_mode="fill",
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling

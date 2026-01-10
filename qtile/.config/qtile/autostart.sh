@@ -1,5 +1,5 @@
 #!/bin/sh
-picom &
+picom --config ~/.dotfiles/picom/.config/picom/picom.square.border.conf &
 
 copyq &
 

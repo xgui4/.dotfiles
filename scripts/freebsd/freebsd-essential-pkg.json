@@ -12,7 +12,7 @@
     "rofi",
     "fish",
     "starship",
-    "qt5c",
-    "qt6c"
+    "qt5ct",
+    "qt6ct"
     ]
 }

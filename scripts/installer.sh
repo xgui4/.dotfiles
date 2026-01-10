@@ -78,3 +78,5 @@ else
   packages=($(jq -r '.pacman[]' "$I3"))
   sudo pkg install -y ${packages[@]}
 fi
+
+touch gtk/.gtkrc # create the file as it is needed 

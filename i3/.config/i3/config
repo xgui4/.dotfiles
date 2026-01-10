@@ -24,16 +24,16 @@ exec_always --no-startup-id killall -q
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # launch copy
-exec_once copyq
+exec copyq
 
 # launch flameshot
-exec_once flameshot
+exec flameshot
 
 # start i3 components
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
-exec_always --no-startup-id autotiling
+exec --no-startup-id autotiling
 
 ### Shortcuts ###
 floating_modifier $mod
@@ -73,12 +73,13 @@ bindsym $mod+Shift+q layout stacking
 bindsym $mod+Shift+t layout tabbed
 bindsym $mod+Shift+e layout toggle split
 
+# Hyprland like Special Workspace (Scratchpad)
 bindsym $mod+Shifts move scratchpad
 bindsym $mod+s scratchpad show
 
 # save and restore layout with i3-resurrect
-bindsym $mod+t  exec --no-startup-id i3-resurrect restore
-bindsym $mod+y  exec --no-startup-id i3-resurrect save
+bindsym $mod+ctrl+r exec --no-startup-id i3-resurrect restore
+bindsym $mod+ctrl+s exec --no-startup-id i3-resurrect save
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -96,6 +97,11 @@ bindsym $mod+b move workspace to output up
 bindsym $mod+d exec "rofi -show drun"
 bindsym $mod+r exec "rofi -show run"
 bindsym $mod+w exec "rofi -show window"
+bindsym $mod+x exec "rofi -show powermenu"
+bindsym $mod+y exec "bash ~/.local/bin/ytdl-mpv"
+bindsym $mod+p exec "~/.dotfiles/rofi/.config/rofi/rofi-mpris"
+bindsym $mod+dot exec "emote"
+bindsym $mod+n exec "zen-browser"
 
 # windows rule
 for_window [class="Microsoft Visual Studio 2022"] floating enable
@@ -182,6 +188,6 @@ client.unfocused #343746 #343746 #F8F8F2 #21222C #21222C
 gaps inner 8
 gaps outer 0
     
-exec --no-startup-id libinput-gestures-setup start
+exec_always --no-startup-id libinput-gestures-setup start
 
-exec --no-startup-id xinput set-prop "ASUF1204:00 2808:0104 Touchpad" "libinput Disable While Typing Enabled" 0
+exec_always --no-startup-id xinput set-prop "ASUF1204:00 2808:0104 Touchpad" "libinput Disable While Typing Enabled" 0

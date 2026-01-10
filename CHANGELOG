@@ -15,3 +15,9 @@
 - Added/Updated Code of Respect to its latest version
 - Added initial FreeBSD Support for the installer
 - Updated the `README.md`
+- Added Rofi power menu and mpris to the dotfiles
+- Added Spectrwm config
+- Added GTK + QT Style
+- Added `save-ricing.sh` to save ricing
+- Added xsettings setting
+- Added icons setting

@@ -1,1 +1,4 @@
 .vscode
+
+# need to be removed as it normally created by gtk/nwg-look
+gtk/.gtkrc-2.0 
