@@ -12,6 +12,7 @@
 - Make the scripts POISX compatible for better BSD support (no longer requiring BASH) and now SH instead of BASH
 - Now `save-rice.sh` is now `save-toolkit-theme.sh`and now longer does the sh
 - Added `.install` installer wrapper with safety feature
+- Add SwayOSD to Hyprland
 
 ## Protoype 2 - 2026-01-9
 
