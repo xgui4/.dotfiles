@@ -21,7 +21,7 @@ exec_always feh --bg-fill ~/.dotfiles/wallpapers/wallpaper-cirno1.jpeg
 
 # launch polybar
 exec_always --no-startup-id killall -q
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.dotfles/i3/.config/polybar/launch.sh
 
 # launch copy
 exec copyq
@@ -31,8 +31,8 @@ exec flameshot
 
 # start i3 components
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id nm-applet
-exec --no-startup-id blueman-applet
+# exec --no-startup-id nm-applet
+# exec --no-startup-id blueman-applet
 exec --no-startup-id autotiling
 
 ### Shortcuts ###
@@ -42,7 +42,7 @@ floating_modifier $mod
 bindsym $mod+q exec kitty
 
 # Emoji
-bindsym $mod+Shift+w exec emote
+# bindsym $mod+Shift+w exec emote
 
 # kill focused window
 bindsym $mod+c kill
@@ -98,15 +98,15 @@ bindsym $mod+d exec "rofi -show drun"
 bindsym $mod+r exec "rofi -show run"
 bindsym $mod+w exec "rofi -show window"
 bindsym $mod+x exec "rofi -show powermenu"
-bindsym $mod+y exec "bash ~/.local/bin/ytdl-mpv"
-bindsym $mod+p exec "~/.dotfiles/rofi/.config/rofi/rofi-mpris"
-bindsym $mod+dot exec "emote"
-bindsym $mod+n exec "zen-browser"
+# bindsym $mod+y exec "bash ~/.local/bin/ytdl-mpv"
+# bindsym $mod+p exec "~/.dotfiles/rofi/.config/rofi/rofi-mpris"
+# bindsym $mod+dot exec ""
+bindsym $mod+n exec "firefox"
 
 # windows rule
-for_window [class="Microsoft Visual Studio 2022"] floating enable
-for_window [class="Microsoft Edge"] floating enable
-for_window [class="File Explorer"] floating enable
+# for_window [class="Microsoft Visual Studio 2022"] floating enable
+# for_window [class="Microsoft Edge"] floating enable
+# for_window [class="File Explorer"] floating enable
 
 # dolphin
 bindsym $mod+e exec "dolphin"
@@ -188,6 +188,6 @@ client.unfocused #343746 #343746 #F8F8F2 #21222C #21222C
 gaps inner 8
 gaps outer 0
     
-exec_always --no-startup-id libinput-gestures-setup start
+# exec_always --no-startup-id libinput-gestures-setup start
 
-exec_always --no-startup-id xinput set-prop "ASUF1204:00 2808:0104 Touchpad" "libinput Disable While Typing Enabled" 0
+# exec_always --no-startup-id xinput set-prop "ASUF1204:00 2808:0104 Touchpad" "libinput Disable While Typing Enabled" 0
