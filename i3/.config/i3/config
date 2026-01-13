@@ -23,6 +23,13 @@ exec_always feh --bg-fill ~/.dotfiles/wallpapers/wallpaper-cirno1.jpeg
 exec_always --no-startup-id killall -q
 exec_always --no-startup-id ~/.dotfiles/i3/.config/polybar/launch.sh
 
+# launch polkit 
+exec --no-startup-id /usr/local/lib/libexec/polkit-kde-authentication-agent-1
+
+# Start KWallet and the Secret Service interface
+exec --no-startup-id /usr/local/bin/kwalletd6
+exec --no-startup-id /usr/local/libexec/pam_kwallet_init
+
 # launch copyq
 exec copyq
 

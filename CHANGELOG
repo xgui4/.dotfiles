@@ -1,6 +1,12 @@
 # CHANGELOG
 
-## BSD-Patch (bsd-branch) - January 13
+
+## BSD-Patch (bsd-branch) - January 13 - 11:05
+
+- Other QT patch + i3 patch 
+- Added KWAllet + kde polkit to i3
+
+## BSD-Patch (bsd-branch) - January 13 - 10:30
 
 - Removed obselete `bsd.dockerfile`  
 - Updated the Readme file 
