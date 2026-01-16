@@ -1,9 +1,10 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
+    "type": "kitty-icat",
     "source" : "~/.config/fastfetch/fastfetch.png",
-    "width" : 30,
-    "height" : 20,
+    "width" : 20,
+    "height" : 20
     },
         "display":
         {
@@ -13,7 +14,7 @@
         "break",
         {
             "type": "title",
-            "keyWidth": 10,
+            "keyWidth": 10
         },
         {
             "type":"host",
@@ -23,62 +24,62 @@
         {
             "type": "os",
             "key": " OS:",
-            "keyColor": "magenta",
+            "keyColor": "magenta"
         },
         {
             "type": "kernel",
             "key": " Kernel:",
-            "keyColor": "blue",
+            "keyColor": "blue"
         },
         {
             "type": "packages",
             "key": " Packages:",
-            "keyColor": "light_blue",
+            "keyColor": "light_blue"
         },
         {
             "type": "shell",
             "key": " Shell:",
-            "keyColor": "green",
+            "keyColor": "green"
         },
         {
             "type": "terminal",
             "key": " Terminal:",
-            "keyColor": "yellow",
+            "keyColor": "yellow"
         },
         {
             "type": "wm",
             "key": " Window Manager:",
-            "keyColor": "38;2;252;148;3",
+            "keyColor": "38;2;252;148;3"
         },
         {
             "type": "Theme",
             "key":"󱠓Themes:",
-            "keyColor": "38;2;252;148;3",
+            "keyColor": "38;2;252;148;3"
         },
         {
             "type": "de",
             "key": " Desktop Environnement:",
-            "keyColor": "38;2;252;148;3",
+            "keyColor": "38;2;252;148;3"
         },
         {
             "type": "cursor",
             "key": "󰇀Cursor:",
-            "keyColor": "red",
+            "keyColor": "red"
         },
         {
             "type": "terminalfont",
             "key": " Terminal Font:",
-            "keyColor": "magenta",
+            "keyColor": "magenta"
         },
         {
             "type": "uptime",
             "key": " Uptime:",
-            "keyColor": "blue",
+            "keyColor": "blue"
         },
         {
             "type": "media",
             "key": "󰝚 Media:",
-            "keyColor": "light_blue",
+            "keyColor": "light_blue"
         },
         {
            "type": "cpu",

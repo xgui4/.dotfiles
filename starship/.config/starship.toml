@@ -50,6 +50,7 @@ Fedora = "󰣛"
 Alpine = ""
 Amazon = ""
 Android = ""
+FreeBSD = "󰣠"
 AOSC = ""
 EndeavourOS = ""
 Arch = "󰣇"
@@ -73,10 +74,17 @@ truncation_symbol = "…/"
 
 [directory.substitutions]
 "Documents" = "󰈙 "
+"Bureau" = "󰧨 "
+"Desktop" = "󰧨 "
 "Downloads" = " "
+"Téléchargements" = " "
 "Music" = "󰝚 "
+"Musique" = "󰝚 "
 "Pictures" = " "
-"Developer" = "󰲋 "
+"Images" = " "
+"Videos" = " "
+"Vidéos" = " "
+"develop" = " "
 
 [git_branch]
 symbol = ""
@@ -157,7 +165,7 @@ format = '[$symbol$environment ]($style)'
 ignore_base = false
 
 [time]
-disabled = true
+disabled = false
 time_format = "%R"
 style = "bg:lavender"
 format = '[[  $time ](fg:crust bg:lavender)]($style)'
@@ -179,7 +187,7 @@ show_milliseconds = true
 format = " in $duration "
 style = "bg:lavender"
 disabled = false
-show_notifications = true
+show_notifications = false
 min_time_to_notify = 45000
 
 [palettes.catppuccin_mocha]

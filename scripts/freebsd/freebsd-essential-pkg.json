@@ -1,7 +1,9 @@
 {
   "pkg" :[
     "stow",
+    "kwalletmanager",
     "dolphin",
+    "caja",
     "picom",
     "kitty",
     "fastfetch",
