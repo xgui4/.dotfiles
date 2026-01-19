@@ -10,6 +10,9 @@
 - more fix for freebsd
 - new fastfetch image 
 - better bash
+- reworked polybar and i3 default for a mate + i3 session 
+- new i3 + picom config for standalone i3 
+- new i3 border
 
 ## BSD-Patch (bsd-branch) - January 13 - 11:05
 

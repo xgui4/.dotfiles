@@ -10,9 +10,15 @@ font pango:Open sans 11
 
 ### Runnig apps in background ###
 
+# set wallpaper with feh
+exec_always feh --bg-fill ~/.dotfiles/wallpapers/wallpaper-cirno1.jpeg
+
 # launch polybar
 exec_always --no-startup-id killall -q
-exec_always --no-startup-id ~/.dotfiles/polybar/.config/polybar/launch-mate.sh
+exec_always --no-startup-id ~/.dotfiles/polybar/.config/polybar/launch.sh
+
+# start i3-lock
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 ### Shortcuts ###
 floating_modifier $mod
@@ -70,15 +76,15 @@ bindsym $mod+l exec i3lock
 bindsym $mod+b move workspace to output up
 
 # run rofi programs
-bindsym $mod+d exec --no-startup-id "rofi -show drun"
-bindsym $mod+r exec --no-startup-id "rofi -show run"
-bindsym $mod+w exec --no-startup-id "rofi -show window"
-bindsym $mod+Shift+w exec --no-startup-id "rofi -show emoji"
-bindsym $mod+x exec --no-startup-id mate-session-save --shutdown-dialog
+bindsym $mod+d exec "rofi -show drun"
+bindsym $mod+r exec "rofi -show run"
+bindsym $mod+w exec "rofi -show window"
+bindsym $mod+Shift+w exec "rofi -show emoji"
+bindsym $mod+x exec "rofi -show powermenu"
 bindsym $mod+n exec "firefox"
 
 # dolphin
-bindsym $mod+e exec "env -u DESKTOP_AUTOSTART_ID caja --no-desktop --browser"
+bindsym $mod+e exec "dolphin"
 
 # take a screenshot
 bindsym Pause exec screenshot -sa
@@ -136,7 +142,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r exec --no-startup-id "gsettings set org.mate.background picture-options 'spanned' && sleep 1 && gsettings set org.mate.background picture-options 'zoom' && i3-msg restart"
+bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+m exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
@@ -147,7 +153,7 @@ bindsym $mod+m exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do 
 default_border pixel 4
 
 #border colors
-client.focused #9c0ddaff #070707ff #ffffffff #4c1ecaff #9900ecff
+client.focused #0000FF #00008B #90D5FF #57B9FF #77B1D4
 client.focused_inactive #343746 #343746 #F8F8F2 #21222C #21222C
 client.unfocused #343746 #343746 #F8F8F2 #21222C #21222C
 
@@ -156,3 +162,6 @@ client.unfocused #343746 #343746 #F8F8F2 #21222C #21222C
 # Set inner/outer gaps
 gaps inner 8
 gaps outer 0
+    
+# window rule
+for_window [class=Firefox] border 1

@@ -1,5 +1,4 @@
-#!/usr/local/bin/bash
-# Note: FreeBSD installs bash at /usr/local/bin/bash
+#!/usr/bin/env bash
 
 # Define the menu options
 chosen=$(printf "   Power Off\n Restart\n   Suspend\n Log out" | rofi -dmenu -i -l 4)

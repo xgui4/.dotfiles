@@ -5,8 +5,7 @@
 #
 
 if [ "$XDG_SESSION_TYPE" = "x11" ]; then
-   export env QT_QPA_PLATFORMTHEME=kde
-   export env QT_QPA_PLATFORM=xcb
+   export env QT_QPA_PLATFORMTHEME=qt6ct
 fi
 
 # These are normally set through /etc/login.conf.  You may override them here
@@ -18,7 +17,7 @@ fi
 # serial line.
 # TERM=xterm; 	export TERM
 
-EDITOR=code-oss;   	export EDITOR
+EDITOR='code-oss';   	export EDITOR
 PAGER=less;  	export PAGER
 
 # set ENV to a file invoked each time sh is started for interactive use.
