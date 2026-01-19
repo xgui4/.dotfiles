@@ -2,7 +2,8 @@
 
 ## 2026/01/19 (dev branch) - 16:00
 
-- Backported more changes from the bsd branch like for fastfetch, startship and the VERSION file
+- Backported more changes from the bsd branch like for fastfetch, startship, bashrc and the VERSION file
+- (in a second commit) , added a bashrc file to the list of change and fixed a fastfetch widhth and height issue backported from the bsd branch 
 
 ## Seperared from BSD - January 19 
 
