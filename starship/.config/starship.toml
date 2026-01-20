@@ -4,6 +4,7 @@ format = """
 [](red)\
 $os\
 $username\
+$sudo\
 [](bg:peach fg:red)\
 $directory\
 [](bg:yellow fg:peach)\
@@ -18,11 +19,16 @@ $golang\
 $nodejs\
 $php\
 $java\
+$grade\
 $kotlin\
+$nim\
 $haskell\
+$lua\
 $python\
-[](fg:green bg:sapphire)\
+$zig\
 $conda\
+[](fg:green bg:sapphire)\
+$shell\
 [](fg:sapphire bg:lavender)\
 $time\
 [ ](fg:lavender)\
@@ -61,12 +67,21 @@ Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
 
 [username]
+disabled = false
 show_always = true
 style_user = "bg:red fg:crust"
-style_root = "bg:red fg:crust"
+style_root = "bg:purple fg:crust"
 format = '[ $user]($style)'
 
+[sudo]
+style = "bg:red fg:crust"
+format = "[ as $symbol]($style)"
+symbol = "super user"
+disabled = false
+allow_windows = true
+
 [directory]
+disabled = false
 style = "bg:peach fg:crust"
 format = "[ $path ]($style)"
 truncation_length = 3
@@ -87,78 +102,117 @@ truncation_symbol = "…/"
 "develop" = " "
 
 [git_branch]
+disabled = false
 symbol = ""
 style = "bg:yellow"
 format = '[[ $symbol $branch ](fg:crust bg:yellow)]($style)'
 
 [git_status]
+disabled = false
 style = "bg:yellow"
 format = '[[($all_status$ahead_behind )](fg:crust bg:yellow)]($style)'
 
 [nodejs]
+disabled = false
 symbol = ""
 style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [c]
+disabled = false
 symbol = " "
 detect_files = ["Makefile", "makefile", ".c"]
 style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [dotnet]
+disabled = false
 symbol = ""
-detect_files = [".cs", ".vsproj"]
+detect_extensions = [ "csproj", "fsproj", "xproj", ".sln", ".sln" ]
+detect_files = ['global.json', 'project.json', 'Directory.Build.props', 'Directory.Build.targets', 'Packages.props']
+heuristic = false
 style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+format = '[[ $symbol( $version) (target $tfm ) ](fg:crust bg:green)]($style)'
 
 [cpp]
+disabled = false
 symbol = ""
-detect_files = [".cpp", ".vcproj", ".vcxproj"]
+detect_files = ['cpp', 'cc', 'cxx', 'c++', 'hpp', 'hh', 'hxx', 'h++', 'tcc']
 style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+format = '[[ $symbol( $version) ]](fg:crust bg:green)]($style)'
 
 [rust]
+disabled = false
 symbol = ""
 style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+format = '[[ $symbol( $version)  ](fg:crust bg:green)]($style)'
 
 [golang]
+disabled = false
 symbol = ""
 style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [php]
+disabled = false
 symbol = ""
 style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [java]
+disabled = false
 symbol = " "
 style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
+[gradle]
+symbol = " "
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
 [kotlin]
+disabled = false
 symbol = ""
 style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [haskell]
+disabled = false
 symbol = ""
 style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
+[lua]
+disabled = false
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[nim]
+disabled = false
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
 [python]
+disabled = false
 symbol = ""
+detect_extensions=[ "py", "ipynb", 'pyw' ]
 style = "bg:green"
 format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:green)]($style)'
 
+[zig]
+disabled = false
+symbol = " "
+
 [docker_context]
+disabled = false
 symbol = ""
 style = "bg:sapphire"
 format = '[[ $symbol( $context) ](fg:crust bg:sapphire)]($style)'
 
 [conda]
+disabled = false
 symbol = "  "
 style = "fg:crust bg:sapphire"
 format = '[$symbol$environment ]($style)'
@@ -189,6 +243,18 @@ style = "bg:lavender"
 disabled = false
 show_notifications = false
 min_time_to_notify = 45000
+
+[shell]
+disabled = false
+fish_indicator = '󰈺 shell'
+powershell_indicator = ''
+bash_indicator = ""
+cmd_indicator = ""
+zsh_indicator = "z"
+xonsh_indicator = "sh"
+unknown_indicator = " unkown"
+format='[$indicator]($style)'
+style = "fg:black bg:sapphire"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"

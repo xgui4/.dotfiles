@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 2026/01/20 (bsd-branch) - 17:00
+- Remove docker file since docker is not native to BSD
+- Updated the readme with wip info and remove info about docker 
+- Move some themes/colors-schemes files to its own folder : themes
+- Removed unused Kvantum folder
+- Removed unused XSettings folder
+- Updated fish_config and remove migration file
+- Updated the starship config with more info and better detection
+- Added a new script to dotfiles
+- Added a new install tools script (WIP)
+- Added a new xgui4-os-dotfiles-version tool to get information 
+
 ## 2026/01/19 (bsd-branch) - 15:30
 - Update Fastfetch with information about the dotfiles
 - Updated the VERSION file for better display

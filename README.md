@@ -31,10 +31,4 @@ git pull
 
 ### How to Test/Debug
 
-## Docker (For Linux based OS)
-
-1. Install Docker
-2. Run `docker buildn -t install.sh .`
-3. Run `docker run -it install.sh .`
-4. Run `docker commit <container_id> my-debug-image`
-5. Run `docker run -it my-debug-image /bin/bash`
+TBD
