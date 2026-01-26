@@ -13,7 +13,10 @@
     "rofi",
     "fish",
     "starship",
-    "nerd-fonts"
+    "nerd-fonts",
+    "exa",
+    "ugrep",
+    "bat"
     ],
     "aur" : [
     "qt5c-kde",

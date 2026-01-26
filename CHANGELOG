@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Better Shells Experience Tests - January 25 2026 - 18h25
+
+- Added Exa, Ugrep, Bat and replace by default their coreutils command and replace their command with alias with a g in the fish shell
+- Added those pkg into the arch essentials jsons files
+- Fixed some hyprland changes
+- Temporaly disabled the maxisum window border color change temporaly until i fixed it for the new hyprland version
+
 ## Big Merge - Janurary 24
 
 - See merges info
