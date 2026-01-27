@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## Add new Experimental Caelestia Session - January 26
+
+- Add a new caelestia shell desktop entry with caelestia specific pathch
+- Change multiple caelestia shell config
+- Add a WIP `THANKS.MD` file for credits
+- Modify some caelestia `.qml` file
+- Added the caelestia `shell.json` file
+- Add flameshot config
+- screenshot utility moved in their main config file temporaly for hyprland
+- Added screenshot
+
 ## Experiement with caelestia-shell (experimentation with quickshell branch) January 26
 
 - Add new quickshell caelestia-shell as a experimentation
