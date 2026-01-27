@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Experiement with caelestia-shell (experimentation with quickshell branch) January 26
+
+- Add new quickshell caelestia-shell as a experimentation
+- Add it dependancies in the Hyprach json files
+- Update the `.gitignore`
+
 ## Better Shells Experience Tests With FreeBSD Branch Backported changes - January 25 2026 - 21h00
 
 - Added completions for Fish and Bash for bat

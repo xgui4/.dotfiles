@@ -6,10 +6,20 @@
     "hyprlock",
     "hypridle",
     "hyprshot",
-    "swayosd"
+    "swayosd",
+    "libqalculate",
+    "aubio",
+    "cava",
+    "ttf-material-symbols-variable",
+    "ddcutil",
+    "app2unit",
+    "brightnessctl",
+    "lm_sensors",
+    "swappy"
     ],
     "aur" : [
-        "quickshell",
-        "hyprshell"
+        "quickshell-git",
+        "hyprshell",
+        "caelestia-cli"
     ]
 }
