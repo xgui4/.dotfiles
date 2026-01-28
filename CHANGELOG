@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Minor Changes - 27 january 2026 - 10:32
+
+Add alias for icat in fish config and create get-shell script for caelestia-shell installation
+
 ## Multiples changes
 
 - Remove screenshots from the main repo since it is no longer on this repo 

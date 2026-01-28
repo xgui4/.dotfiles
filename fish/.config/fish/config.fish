@@ -12,6 +12,7 @@ if status is-interactive
     alias gls="/usr/bin/ls"
     alias grep="ugrep"
     alias ggrep="/usr/bin/grep"
+    alias icat="kitty +kitten icat"
 
     bat --completion fish | source
 end
