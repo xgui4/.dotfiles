@@ -1,19 +1,11 @@
-# Xgui4 OS Dotfiles For Linux-Based Systems
+# Xgui4 OS Dotfiles For Windows NT
 
 > [!NOTE]
 > This branch is my personal config who change often for stability the xgui4-os/.dotfiles is prefered or a other dotfiles made for daily use.
 
-My dotfiles of my GNU/Linux System, including HyprArch (my hyprland setup) and i3wm and qtile config and terminal config and a work in progress installer.
-
 ## Screenshots
 
-# Caelestia Shell Setup
-![Caelestia Setup](screenshot/caelestia/caelestia.png)
-![Caelestia Bar Setup](screenshot/caelestia/caelestia-bar.png)
-
-# Hyprland Setup (will be updated soon)
-![Hyprland Setup](screenshot/hyprland/hyprland.png)
-![Hyprland Setup image 2](screenshot/hyprland/hyprland-1.png)
+- Coming Soon
 
 ### Mores screenshots coming soon...
 
@@ -21,6 +13,9 @@ My dotfiles of my GNU/Linux System, including HyprArch (my hyprland setup) and i
 
 ### to install the dotfiles
 
+Step for Windows NT coming soon!
+
+-> this is for Unix like system, a rework will be needed for Windows NT
 > [!CAUTION]
 > This could override your config, so make sure you backup your .dotfiles first!
 

@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Windows Branch : 12 February 
+
+- new branch created 
+- removed files irrevelant to windows
+- Updated the readme
+
 ## Feb 6 Update
 
 - Update Rofi powermenu for non-systemd system
