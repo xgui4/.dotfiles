@@ -1,8 +1,0 @@
-{
-    "pacman" : [
-        "qtile"
-    ],
-    "aur" : [
-        "qtile-extra"
-    ]
-}

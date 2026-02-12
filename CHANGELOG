@@ -5,6 +5,7 @@
 - new branch created 
 - removed files irrevelant to windows
 - Updated the readme
+- big wip changes for windows compatibiity, still no automation since it work with gnu stow which is not available on Windows 
 
 ## Feb 6 Update
 

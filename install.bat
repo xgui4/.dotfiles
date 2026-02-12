@@ -10,5 +10,5 @@ else
         exit 1
     fi 
 
-    exec $HOME/.dotfiles/scripts/installer.sh
+    $HOME/.dotfiles/scripts/installer.sh
 fi
