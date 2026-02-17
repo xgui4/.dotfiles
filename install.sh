@@ -4,11 +4,11 @@ if [ "$(id -u)" -eq 0 ]; then
     echo "Error: This script must NOT be run in admin mode for safety reasons."
     exit 1
 else
-    if [ $(pwd) != "$HOME/.dotfiles" ]; then
+    if [ "$(pwd)" != "$HOME/.dotfiles" ]; then
         echo "Error! The root of the dotfiles must be at $HOME/.dotfiles. Else the script will fail."
         echo "Current location: $PWD"
         exit 1
     fi 
 
-    exec $HOME/.dotfiles/scripts/installer.sh
+    exec "$HOME/.dotfiles/scripts/installer.sh"
 fi

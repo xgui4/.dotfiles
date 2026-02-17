@@ -1,11 +1,13 @@
 #!/bin/sh
 
-echo "Preparing installer"
-
-echo "Installing Yay AUR Helper"
+# to fix dolphin : sudo ln -sf /etc/xdg/menus/arch-applications.menu /etc/xdg/menus/applications.menu 
 
 # Exit on any error
 set -e
+
+echo "Preparing installer"
+
+echo "Installing Yay AUR Helper"
 
 sudo pacman -S --needed --noconfirm base-devel git
 
@@ -39,7 +41,6 @@ fi
 qtile_choosen=0
 hyprland_choosen=0
 i3_choosen=0
-spectrwm_choosen=0
 
 printf "Do you want to install i3 ?"
 read -r user_input
@@ -62,18 +63,11 @@ if [ "$user_input" = "yes" ] || [ "$user_input" = "Yes" ]; then
     hyprland_choosen=1
 fi 
 
-printf "Do you want to install spectrwm ?"
-read -r user_input
-
-if [ "$user_input" = "yes" ] || [ "$user_input" = "Yes" ]; then
-    spectrwm_choosen=1
-fi 
-
 # Define the JSON file
-ARCH="$HOME/.dotfiles/scripts/arch/arch-essential-pkg.json"
-I3="$HOME/.dotfiles/scripts/arch/i3-setup.json"
-HYPRARCH="$HOME/.dotfiles/scripts/arch/hyprarch-setup.json"
-QTILE="$HOME/.dotfiles/scripts/arch/qtile-setup.json"
+ARCH="$HOME/.dotfiles/scripts/data/arch/arch-essential-pkg.json"
+I3="$HOME/.dotfiles/scripts/data/arch/i3-setup.json"
+HYPRARCH="$HOME/.dotfiles/scripts/data/arch/hyprarch-setup.json"
+QTILE="$HOME/.dotfiles/scripts/data/arch/qtile-setup.json"
 
 packages=$(jq -r '.pacman[]' "$ARCH")
 sudo pacman -S --noconfirm "$packages"
@@ -118,10 +112,6 @@ if [ "$i3_choosen" = 1 ]; then
     stow --adopt i3 
     stow --adopt polybar 
     stow --adopt picom 
-fi
-
-if [ "$spectrwm_choosen" = 1 ]; then 
-    stow  --adopt spectrwm
 fi
 
 stow --adopt bash 

@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## Feb 17 Part 2 update 
+
+- Modify the the whole scripts folder with new subfolders : 
+  - data (for the packages list)
+  - assets for file in /usr/share/
+  - utils : wheres tools/utils scripts are located
+  - no sub-folders : script to install/manager the dotfiles
+- Fix the hyprland configs and removes old codes
+- Smalls update to the installers scripts 
+- Smalls update to the gitinores
+
 ## Feb 17 Update
 
 - add wine ISCC config
@@ -14,7 +25,6 @@
 - fix the hyprlock
 - update the plugin of hyprland
 - removed unused spectrwm config
-
 
 ## Feb 12 Update : 
 
