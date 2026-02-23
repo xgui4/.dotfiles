@@ -254,13 +254,13 @@ min_time_to_notify = 45000
 
 [shell]
 disabled = false
-fish_indicator = '󰈺 shell'
-powershell_indicator = ''
-bash_indicator = ""
-cmd_indicator = ""
-zsh_indicator = "z"
-xonsh_indicator = "sh"
-unknown_indicator = " unkown"
+fish_indicator = '󰈺 fish'
+powershell_indicator = ' pwsh'
+bash_indicator = " bash"
+cmd_indicator = " cmd"
+zsh_indicator = " zsh"
+xonsh_indicator = " xonsh"
+unknown_indicator = " unknown"
 format='[$indicator]($style)'
 style = "fg:black bg:sapphire"
 
