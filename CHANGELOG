@@ -20,7 +20,7 @@
 - add wine ISCC config
 - fix some starship setting 
 
-## Feb 13 Update : 
+## Feb 13 Update 
 
 - Re-add info to readme
 - fix qtile
@@ -30,7 +30,7 @@
 - update the plugin of hyprland
 - removed unused spectrwm config
 
-## Feb 12 Update : 
+## Feb 12 Update 
 
 - Update environment variables 
 - remove obsolete GTK  and QT configurations
