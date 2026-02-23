@@ -14,6 +14,7 @@ $git_status\
 $c\
 $dotnet\
 $cpp\
+$cmake\
 $rust\
 $golang\
 $nodejs\
@@ -122,6 +123,12 @@ format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 disabled = false
 symbol = " "
 detect_files = ["Makefile", "makefile", ".c"]
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
+[cmake]
+disabled = false
+symbol = " "
 style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
