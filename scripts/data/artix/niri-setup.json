@@ -1,0 +1,11 @@
+{
+    "pacman" : [
+        "niri"
+    ],
+
+    "aur" : [
+        "dms-shell",
+        "dms-shell-hyprland", 
+        "dms-shell-niri"
+    ]
+}
