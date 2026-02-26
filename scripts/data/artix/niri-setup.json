@@ -1,6 +1,7 @@
 {
     "pacman" : [
-        "niri"
+        "niri",
+        "xwayland-satellite"
     ],
 
     "aur" : [

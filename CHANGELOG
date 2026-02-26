@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Feb 26 
+
+- Fix niri by adding xwayland-statellites
+
 ## Feb 25
 
 - Added Niri and DMS
