@@ -94,6 +94,10 @@ layout {
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     default-column-width { proportion 0.5; }
 
+    focus-ring {
+        off
+    }
+
 
     // You can also add a border. It's similar to the focus ring, but always visible.
     border {
@@ -108,7 +112,7 @@ layout {
         urgent-color "#9b0000"
 
         // Gradients can use a few different interpolation color spaces.
-        active-gradient from="purple" to="orange" angle=45 relative-to="workspace-view" in="oklch longer hue"
+        active-gradient from="purple" to="blue" angle=45 relative-to="workspace-view" in="oklch longer hue"
 
         inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
