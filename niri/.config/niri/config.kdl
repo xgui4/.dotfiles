@@ -249,6 +249,8 @@ binds {
     Mod+D hotkey-overlay-title="Run an Application: rofi -show drun" { spawn-sh "rofi -show drun"; }
     Mod+R hotkey-overlay-title="Run an Application: rofi -show run" { spawn-sh "rofi -show run"; }
     Mod+W hotkey-overlay-title="Run an Application: rofi -show emoji" { spawn-sh "rofi -show emoji"; }
+    Mod+E hotkey-overlay-title="Run an Application: dolphin" { spawn-sh "dolphin"; }
+    Mod+N hotkey-overlay-title="Run an Application: firefox" { spawn-sh "firefox"; }
     Mod+Shift+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Mod+C repeat=false { close-window; }
     Mod+F   { toggle-window-floating; }
@@ -304,10 +306,10 @@ binds {
     Mod+K     { focus-window-up; }
     Mod+L     { focus-column-right; }
 
-    Mod+Ctrl+H     { move-column-left; }
-    Mod+Ctrl+J     { move-window-down; }
-    Mod+Ctrl+K     { move-window-up; }
-    Mod+Ctrl+L     { move-column-right; }
+    Mod+Shift+H     { move-column-left; }
+    Mod+Shift+J     { move-window-down; }
+    Mod+Shift+K     { move-window-up; }
+    Mod+Shift+L     { move-column-right; }
 
     // Numbpad naviguation
     Mod+Home { focus-column-first; }

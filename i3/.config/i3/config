@@ -107,22 +107,28 @@ bindsym $mod+n exec "firefox"
 # windows rule
 # for_window [class="File Explorer"] floating enable
 for_window [class="pavucontrol"] floating enable, move position center
+for_window [class="Blueman-manager"] floating enable, move position center
 
 # dolphin
 bindsym $mod+e exec "dolphin"
 
 # take a screenshots
-bindsym Pause exec screenshot -sa
-bindsym Print exec screenshot -sf
+bindsym Print exec flameshot gui
 
 # brightness control
 bindsym XF86MonBrightnessUp exec brightnessctl s 2+
 bindsym XF86MonBrightnessDown exec brightnessctl s 2-
 
 # audio control
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ && volume &
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- && volume &
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && mute &
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # turn off screen
 bindsym XF86ScreenSaver exec xset dpms force off
