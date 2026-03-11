@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## March 11
+
+- Updated niri config
+- Update polybar and changing the character that was missing and new battery features
+- Updated i3 config with added stop audio button
+
 ## Mars 4 
 
 - Remove focus ring in niri ! 
