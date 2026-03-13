@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## March 13
+
+- Fix polybar
+- Added a session-importer.sh util scropt to import Graphical session
+- Update `readme.md`
+- Update `THANKS.md`
+
 ## March 11
 
 - Updated niri config
@@ -39,7 +46,7 @@
   - no sub-folders : script to install/manager the dotfiles
 - Fix the hyprland configs and removes old codes
 - Smalls update to the installers scripts 
-- Smalls update to the gitinores
+- Smalls update to the gitignores
 
 ## Feb 17 Update
 

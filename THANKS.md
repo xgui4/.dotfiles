@@ -18,7 +18,10 @@
 - Quickshell
 - GNU Stow
 - EndeavourOS (Arch Version)
+- Artix Linux OpenRC 
 - GhostBSD (FreeBSD version)
+- dms Linux (dank shell)
+- Niri
 - Fish
 - Starship
 - Bash
@@ -41,8 +44,8 @@
 - hyprshell
 - caelestia shell
 - jq
-- dockerfile
-- UNIX/POISX Shell
+- docker
+- UNIX/POISX Shell 
 - git
 - sddm
 - MATE (for the FreeBSD version)
