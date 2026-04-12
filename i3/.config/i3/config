@@ -44,7 +44,7 @@ floating_modifier $mod
 bindsym $mod+q exec kitty
 
 # Emoji
-bindsym $mod+Shift+w exec "rofi -modi emoji -show emoji"
+bindsym $mod+Shift+w exec "rofimoji --action copy clipboard"
 
 # kill focused window
 bindsym $mod+c kill

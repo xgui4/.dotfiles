@@ -48,3 +48,6 @@ git pull
 3. Run `docker run -it install.sh .`
 4. Run `docker commit <container_id> my-debug-image`
 5. Run `docker run -it my-debug-image /bin/bash`
+
+
+### app to add :  wl-clipboard ydotool wtype xclip

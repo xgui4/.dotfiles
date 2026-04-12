@@ -71,6 +71,7 @@ keys = [
         desc="Toggle between split and unsplit sides of stack",
     ),
     Key([mod], "w", lazy.spawn("rofi -show window"), desc="Launchin Rofi in window mode"),
+    Key([mod, "shift"], "w", lazy.spawn("rofimoji --action copy clipboard"), desc="Launchin Rofimoji in window mode"),
     Key([mod], "d", lazy.spawn("rofi -show drun"), desc="Launchin Rofi in drun mode"),
     Key([mod], "q", lazy.spawn(terminal), desc="Launch terminal"),
     # Toggle between different layouts as defined below

@@ -175,9 +175,9 @@ layout {
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
-// This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-sh-at-startup "dms run"
 spawn-at-startup "copyq"
+spawn-sh-at-startup "/usr/lib/hyprpolkitagent/hyprpolkitagent"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
@@ -248,7 +248,7 @@ binds {
     Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Run an Application: rofi -show drun" { spawn-sh "rofi -show drun"; }
     Mod+R hotkey-overlay-title="Run an Application: rofi -show run" { spawn-sh "rofi -show run"; }
-    Mod+W hotkey-overlay-title="Run an Application: rofi -show emoji" { spawn-sh "rofi -show emoji"; }
+    Mod+W hotkey-overlay-title="Run an Application: rofimoji" { spawn-sh "rofimoji --action copy clipboard"; }
     Mod+E hotkey-overlay-title="Run an Application: dolphin" { spawn-sh "dolphin"; }
     Mod+N hotkey-overlay-title="Run an Application: firefox" { spawn-sh "firefox"; }
     Mod+Shift+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
@@ -400,7 +400,7 @@ binds {
     Mod+Shift+S { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
     F11 { maximize-column; }
-    Shift+F11 { fullscreen-window; }
+    Ctrl+F11 { fullscreen-window; }
     Mod+Ctrl+F { expand-column-to-available-width; }
     Mod+Return { center-column; }
     Mod+Ctrl+Return { center-visible-columns; }
