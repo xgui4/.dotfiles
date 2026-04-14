@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## April 14 
+
+- Added runx command for qt x11 fallback for the fish shell as a commmand/alias
+
 ## April 12
 
 - Lot of minors update and new version names
