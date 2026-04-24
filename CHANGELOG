@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## April 24
+
+- New Wallpaper 
+- Add Neovim config 
+- New temporaly window rule for my own app for testing
+
 ## April 14 
 
 - Added runx command for qt x11 fallback for the fish shell as a commmand/alias

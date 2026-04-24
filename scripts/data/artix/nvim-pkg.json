@@ -1,0 +1,8 @@
+{
+	"pacman" : [
+		"nvim",
+		"ripgrep",
+		"unzip",
+		"fd-find"
+	]
+}
