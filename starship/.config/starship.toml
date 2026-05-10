@@ -28,6 +28,8 @@ $lua\
 $python\
 $zig\
 $conda\
+$guix_shell\
+$nix_shell\
 [](fg:green bg:sapphire)\
 $shell\
 [](fg:sapphire bg:lavender)\
@@ -62,7 +64,7 @@ AOSC = ""
 EndeavourOS = ""
 NixOS=""
 Arch = "󰣇"
-Artix = "󰣇"
+Artix = ""
 CentOS = ""
 Debian = "󰣚"
 Redhat = "󱄛"
@@ -102,6 +104,15 @@ truncation_symbol = "…/"
 "Videos" = " "
 "Vidéos" = " "
 "develop" = " "
+"Projets" = " "
+".github" = " "
+"workflows" = " "
+".git" = " "
+"App" = "󰀻"
+"app" = "󰀻"
+"pkg" = "󰏖 "
+"packages" = "󰏖 "
+"applications" = "󰀻"
 
 [git_branch]
 disabled = false
@@ -223,9 +234,21 @@ format = '[[ $symbol( $context) ](fg:crust bg:sapphire)]($style)'
 [conda]
 disabled = false
 symbol = "  "
-style = "fg:crust bg:sapphire"
-format = '[$symbol$environment ]($style)'
+style = "fg:black bg:green"
+format = '[via [$symbol$environment]($style)'
 ignore_base = false
+
+[nix_shell]
+disabled = false
+symbol = "󱄅"
+style = "fg:black bg:green"
+format = '[via $symbol $state $name]($style)'
+
+[guix_shell]
+disabled = false
+symbol = ""
+style = "fg:black bg:green"
+format = '[via [$symbol $name]]($style)'
 
 [time]
 disabled = false
