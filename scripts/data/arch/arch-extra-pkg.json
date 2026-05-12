@@ -3,7 +3,5 @@
         "kvantum",
         "cmatrix",
         "lolcat"
-    ],
-    "aur" : [
-        "hyprls-git"    ]
+    ]
 }

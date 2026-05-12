@@ -13,7 +13,6 @@ WORKDIR /home/developer
 COPY --chown=developer:developer . .dotfiles/
 
 RUN chmod +x .dotfiles/install.sh \
-             .dotfiles/scripts/freebsd-installer \
              .dotfiles/scripts/arch-installer
 
 # 7. Use the correct path for CMD
