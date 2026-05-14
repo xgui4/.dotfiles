@@ -4,6 +4,7 @@
 
 - added nanorc
 - added more fish alias
+- Part 2 : more fix for hyprland lua and add hyprshutdown as packages
 
 ## Hyprland Transition to Lua (May 12)
 

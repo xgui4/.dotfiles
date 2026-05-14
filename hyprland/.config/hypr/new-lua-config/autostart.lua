@@ -10,7 +10,6 @@ hl.exec_cmd("blueman-applet")
 hl.exec_cmd("XDG_MENU_PREFIX=kde- kbuildsycoca6")
 hl.exec_cmd("hyprsunset")
 hl.exec_cmd("brightnessctl s 100%")
-hl.exec_cmd("flameshot")
 hl.exec_cmd("swayosd-server")
 
 -- hpyrpolkit agent, for the auth agent, you change choose a other one if you want

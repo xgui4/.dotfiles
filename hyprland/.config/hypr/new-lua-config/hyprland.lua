@@ -7,64 +7,72 @@
 ---- MONITORS ----
 ------------------
 
-dofile("monitors.lua")
+-- require("monitors.lua")
+dofile("/home/xgui4/.dotfiles/hyprland/.config/hypr/new-lua-config/monitors.lua")
 
 -------------------
 ---- PROGRAMS ----
 -------------------
 
-local terminal = "kitty"  -- default terminal 
-local fileManager = "dolphin" -- default file manager
-local browser = "firefox" -- default browser
-local menu = "rofi" -- default launcher/menu 
-local emoji = "rofimoji --action copy clipboard" -- default emoji picker
-local clipboardManager = "copyq" -- defaiut clipboard manager 
+terminal = "kitty"  -- default terminal 
+fileManager = "dolphin" -- default file manager
+browser = "firefox" -- default browser
+menu = "rofi" -- default launcher/menu 
+emoji = "rofimoji --action copy clipboard" -- default emoji picker
+clipboardManager = "copyq" -- defaiut clipboard manager 
 local screenshotUtiliy = "hyprshot -m region" -- default screenshot utility
 
 -------------------
 ---- AUTOSTART ----
 -------------------
 
-dofile("autostart.lua")
+-- require("autostart.lua")
+dofile("/home/xgui4/.dotfiles/hyprland/.config/hypr/new-lua-config/autostart.lua")
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
 
-dofile("env.lua")
-
-dofile("nvidia.lua")
+-- require("env.lua")
+-- require("nvidia.lua")
+dofile("/home/xgui4/.dotfiles/hyprland/.config/hypr/new-lua-config/env.lua")
+dofile("/home/xgui4/.dotfiles/hyprland/.config/hypr/new-lua-config/nvidia.lua")
 
 -----------------------
 ---- LOOK AND FEEL ----
 -----------------------
 
-dofile("appearence.lua")
+-- require("appearence.lua")
+dofile("/home/xgui4/.dotfiles/hyprland/.config/hypr/new-lua-config/appearence.lua")
 
 ---------------
 ---- INPUT ----
 ---------------
 
-dofile("input.lua")
+-- require("input.lua")
+dofile("/home/xgui4/.dotfiles/hyprland/.config/hypr/new-lua-config/input.lua")
 
 ---------------------
 ---- PERMISSIONs ----
 ---------------------
 
-dofile("permission.lua")
+-- require("permission.lua")
+dofile("/home/xgui4/.dotfiles/hyprland/.config/hypr/new-lua-config/permission.lua")
 
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
 
-dofile("keybinding.lua")
+-- require("keybinding.lua")
+dofile("/home/xgui4/.dotfiles/hyprland/.config/hypr/new-lua-config/keybinding.lua")
 hl.bind("PRINT" .. "", hl.dsp.exec_cmd(screenshotUtiliy))
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
 
-dofile("windows-rule.lua")
+-- require("windows-rule.lua")
+dofile("/home/xgui4/.dotfiles/hyprland/.config/hypr/new-lua-config/windows-rule.lua")
 
 ------------------
 -- Fix for apps --
@@ -77,4 +85,5 @@ dofile("windows-rule.lua")
 -- Plugins config --
 ---------------------
 
-dofile("~/.config/hypr/plugins.lua")
+-- require("plugins.lua")
+dofile("/home/xgui4/.dotfiles/hyprland/.config/hypr/new-lua-config/plugins.lua")
