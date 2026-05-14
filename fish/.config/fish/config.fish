@@ -13,8 +13,9 @@ if status is-interactive
     alias grep="ugrep"
     alias ggrep="/usr/bin/grep"
     alias icat="kitty +kitten icat"
-    alias doom-emacs="doom emacs"
-    alias iscc="wine $HOME/.wine/drive_c/users/xgui4/AppData/Local/Programs/iss/ISCC.exe"
+    alias doom-emacs="doom emacs"    
+    alias find=fd
+    alias gfind=/usr/bin/find
 
     bat --completion fish | source
 end

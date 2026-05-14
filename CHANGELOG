@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 14 May
+
+- added nanorc
+- added more fish alias
+
 ## Hyprland Transition to Lua (May 12)
 
 - Disabled some outdated config or comment it
