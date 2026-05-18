@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 17 May
+
+- fix Polybar
+- fix picom
+
 ## 14 May
 
 - added nanorc
