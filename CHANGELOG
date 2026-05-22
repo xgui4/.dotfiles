@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 22 may
+
+- add more softwares to the dotfiles :
+  - audacious
+  - doom emacs
+  - btop
+  - VScode
+  - DankmaterialShell
+  - gh
+
 ## 17 May
 
 - fix Polybar
