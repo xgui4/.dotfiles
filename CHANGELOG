@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## June 3
+
+- Removed Vscode and audacious from stow
+- Update lazy nvim and btop configuration
+
 ## 22 may
 
 - add more softwares to the dotfiles :
