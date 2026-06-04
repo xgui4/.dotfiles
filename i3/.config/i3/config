@@ -116,8 +116,8 @@ bindsym $mod+e exec "dolphin"
 bindsym Print exec flameshot gui
 
 # brightness control
-bindsym XF86MonBrightnessUp exec brightnessctl s 2+
-bindsym XF86MonBrightnessDown exec brightnessctl s 2-
+bindsym XF86MonBrightnessUp exec brightnessctl s 2%+
+bindsym XF86MonBrightnessDown exec brightnessctl s 2%-
 
 # audio control
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5

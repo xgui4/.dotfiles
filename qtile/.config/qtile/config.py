@@ -248,27 +248,27 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        top=bar.Bar(
-            [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
-                widget.Backlight(), 
-                widget.PulseVolume(), 
-                widget.BatteryIcon(), 
-                widget.Battery(foreground='247052', low_percentage=0.20,
-                               low_foreground='fa5e5b', update_delay=10,
-                               format='{percent:.0%}'
-                ),
-                widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                widget.QuickExit(),
-            ],
-            40,
-             #border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-             #border_color= ["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"]
-        ),
+        # top=bar.Bar(
+        #     [
+        #         widget.CurrentLayout(),
+        #         widget.GroupBox(),
+        #         widget.Prompt(),
+        #         widget.WindowName(),
+        #         widget.Backlight(), 
+        #         widget.PulseVolume(), 
+        #         widget.BatteryIcon(), 
+        #         widget.Battery(foreground='247052', low_percentage=0.20,
+        #                        low_foreground='fa5e5b', update_delay=10,
+        #                        format='{percent:.0%}'
+        #         ),
+        #         widget.Systray(),
+        #         widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
+        #         widget.QuickExit(),
+        #     ],
+        #     40,
+        #      #border_width=[2, 0, 2, 0],  # Draw top and bottom borders
+        #      #border_color= ["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"]
+        # ),
         background="#000000",
         wallpaper="~/.dotfiles/wallpapers/wallpaper-cirno1.jpeg",
         wallpaper_mode="fill",
@@ -278,26 +278,26 @@ screens = [
         # x11_drag_polling_rate = 60,
     ),    
     Screen(
-        top=bar.Bar(
-            [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
-                # widget.Backlight(),
-                widget.PulseVolume(), 
-                widget.BatteryIcon(),
-                widget.Battery(foreground='247052', low_percentage=0.20,
-                               low_foreground='fa5e5b', update_delay=10,
-                               format='{percent:.0%}'
-                ),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                widget.QuickExit(),
-            ],
-            40,
-             #border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-             #border_color= ["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"]
-        ),
+        # top=bar.Bar(
+        #     [
+        #         widget.CurrentLayout(),
+        #         widget.GroupBox(),
+        #         widget.Prompt(),
+        #         widget.WindowName(),
+        #         # widget.Backlight(),
+        #         widget.PulseVolume(), 
+        #         widget.BatteryIcon(),
+        #         widget.Battery(foreground='247052', low_percentage=0.20,
+        #                        low_foreground='fa5e5b', update_delay=10,
+        #                        format='{percent:.0%}'
+        #         ),
+        #         widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
+        #         widget.QuickExit(),
+        #     ],
+        #     40,
+        #      #border_width=[2, 0, 2, 0],  # Draw top and bottom borders
+        #      #border_color= ["#9A0EE6", "#011A6A", "#48DB10", "#FF5733"]
+        # ),
         background="#000000",
         wallpaper="~/.dotfiles/wallpapers/wallpaper-cirno2.png",
         wallpaper_mode="fill",

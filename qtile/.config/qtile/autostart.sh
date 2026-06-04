@@ -12,3 +12,5 @@ nm-applet &
 blueman-applet &
 
 libinput-gestures-setup start &
+
+polybar main
