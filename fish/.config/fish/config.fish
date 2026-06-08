@@ -2,7 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     starship init fish | source
     alias fastfetch-image="fastfetch -c ~/.dotfiles/fastfetch/.config/fastfetch/config-image.jsonc"
-    alias i-use-arch-btw="fastfetch -c ~/.dotfiles/fastfetch/.config//fastfetch/config-image.jsonc --logo arch"
+    alias i-use-artix-btw="fastfetch -c ~/.dotfiles/fastfetch/.config//fastfetch/config-image.jsonc --logo artix"
     alias wkill="hyprctl kill"
     alias neofetch="fastfetch -c neofetch"
     alias cmatrix-rainbow="cmatrix | lolcat"
