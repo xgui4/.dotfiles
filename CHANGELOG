@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## June 12
+
+- fix Hyprland with SonicDE installed by forcing xwayland
+
 ## June 8
 
 - new i use artix btw alias for fastfetch
