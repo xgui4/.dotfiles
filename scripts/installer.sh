@@ -128,3 +128,12 @@ stow --adopt wallpapers
 stow --adopt xsettings
 stow --adopt flameshot
 stow --adopt account-profile
+stow --adopt gh 
+stow --adopt niri
+stow --adopt neovim
+stow --adopt DankMaterial
+stow --adopt doom
+stow --adopt nano 
+stow --adopt btop
+stow --adopt zsh
+stow --adopt audacious

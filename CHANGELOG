@@ -7,6 +7,11 @@
 - and remove the alias of cat and bat to fish
 - add some more alias to bash
 
+### Part 2
+
+- minor bash logou correction
+- bash script update
+
 ## June 12
 
 - fix Hyprland with SonicDE installed by forcing xwayland
