@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## June 21
+
+- Fix fish to look correct even in tty
+- add md commnd to both bash and fish
+- and remove the alias of cat and bat to fish
+- add some more alias to bash
+
 ## June 12
 
 - fix Hyprland with SonicDE installed by forcing xwayland

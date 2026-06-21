@@ -2,3 +2,6 @@
 #
 # ~/.bash_logout
 #
+
+
+rm ~/.cache/temp.html
