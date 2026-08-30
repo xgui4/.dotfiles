@@ -18,7 +18,7 @@ exec_always --no-startup-id picom &
 exec_always --no-startup-id dunst &
 
 # set wallpaper with feh
-exec_always feh --bg-fill ~/.dotfiles/wallpapers/touhou/cirno.jpeg
+exec_always feh --bg-fill /home/xgui4/.dotfiles/wallpapers/touhou/cirno-1.png
 
 # launch polybar
 exec_always --no-startup-id killall -q
