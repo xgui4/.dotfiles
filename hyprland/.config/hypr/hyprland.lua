@@ -37,7 +37,8 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("hyprsunset")
     hl.exec_cmd("/usr/lib/hyprpolkitagent/hyprpolkitagent")
     hl.exec_cmd("qs -c overview")
-    hl.exec_cmd("sleep 1 &&$HOME/.config/hypr/scripts/waybar_auto_hide &") 
+    hl.exec_cmd("sleep 1 &&$HOME/.config/hypr/scripts/waybar_auto_hide &")
+    hl.exec_cmd("waypaper --restore") 
 end)
 
 -------------------------------
@@ -59,7 +60,6 @@ hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")
 -- Toolkit backends 
 hl.env("GDK_BACKEND", "wayland, x11")
 hl.env("QT_QPA_PLATFORM", "wayland")
-hl.env("SDL_VIDEODRIVER", "wayland, x11, windows")
 hl.env("CLUTTER_BACKEND", "wayland")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 
@@ -98,7 +98,6 @@ require("permission")
 ---- KEYBINDINGS ----"
 ---------------------
 
--- require("keybinding.lua")
 require("keybinding")
 hl.bind("SUPER + TAB", hl.dsp.exec_cmd("qs ipc -c overview call overview toggle"))
 hl.bind("PRINT" .. "", hl.dsp.exec_cmd(screenshotUtiliy))
@@ -107,7 +106,6 @@ hl.bind("PRINT" .. "", hl.dsp.exec_cmd(screenshotUtiliy))
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
 
--- require("windows-rule.lua")
 require("windows-rule")
 
 ------------------
@@ -126,7 +124,7 @@ hl.config({
 -- Plugins config --
 ---------------------
 
-require("plugins")
+-- require("plugins")
 
 -- Reload Hyprland config trick 
 

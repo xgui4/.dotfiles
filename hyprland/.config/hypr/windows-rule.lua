@@ -10,14 +10,16 @@ hl.window_rule({
     name  = "Picture in Picture mode",
     match = { title = "Incrustation vidéo"},
     float = true,
-    pin = true
+    pin = true,
+    ["hyprbars:no_bar"] = true
 })
 
 hl.window_rule({
-    name  = "Picture in Picture mode (english)",
-    match = { title = "Picture in Picture"},
+    name  = "Picture-in-Picture mode (english)",
+    match = { title = "Picture-in-Picture"},
     float = true,
-    pin = true
+    pin = true,
+    ["hyprbars:no_bar"] = true
 })
 
 hl.window_rule({

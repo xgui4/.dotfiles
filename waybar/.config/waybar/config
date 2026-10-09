@@ -4,13 +4,11 @@
     "height": 20,
     "on-sigusr1": "hide",
     "on-sigusr2": "show",
-    "modules-left": [
-        "custom/launcher", 
+    "modules-left": [ 
         "hyprland/workspaces",
         "hyprland/window"
     ],
-    "modules-center": [
-        "temperature", 
+    "modules-center": [ 
         "cpu",
         "memory"
     ],
@@ -20,8 +18,7 @@
         "clock",
         "battery",
         "tray",
-        "custom/notification",
-        "custom/power"
+        "custom/notification"
     ],
     
     "hyprland/workspaces": {

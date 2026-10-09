@@ -36,6 +36,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id copyq
 exec --no-startup-id blueman-applet
 exec --no-startup-id autotiling
+exec --no-startup-id /usr/bin/autobin
 
 ### Shortcuts ###
 floating_modifier $mod
@@ -100,8 +101,6 @@ bindsym $mod+d exec "rofi -show drun"
 bindsym $mod+r exec "rofi -show run"
 bindsym $mod+w exec "rofi -show window"
 bindsym $mod+x exec "rofi -show powermenu"
-bindsym $mod+y exec "bash ~/.local/bin/ytdl-mpv"
-bindsym $mod+p exec "~/.dotfiles/rofi/.config/rofi/rofi-mpris"
 bindsym $mod+n exec "firefox"
 
 # windows rule
