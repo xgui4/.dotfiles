@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 20 october
+
+- Some repo cleaning : remove the unused dockerfile
+- Update i3 config with dynamic wallpaper and add polkit support
+- Fix some i3 and hyprland configs
+- Minor update to the DankmaterialShell and btop
+- fix for 2webp for fish
+- reput picom in gkx mode
+
 ## 8 october
 
 - Added new wallpapers

@@ -12,7 +12,6 @@ if status is-interactive
     alias wkill="hyprctl kill"
     alias neofetch="fastfetch -c neofetch"
     alias cmatrix-rainbow="cmatrix | lolcat"
-    alias gcat="/usr/bin/cat"
     alias ls="exa --icons=auto"
     alias gls="/usr/bin/ls"
 
@@ -34,6 +33,7 @@ function on_exit --on-process %self
 end
 
 function 2webp --description "Any image to webp!"
-    bash 2webp $1
-    fish
+    for anim in $1;
+        ffmpeg "-i $anim -loop 0 $anim%.*.webp"
+    end
 end

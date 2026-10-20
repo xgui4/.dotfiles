@@ -17,26 +17,19 @@ exec_always --no-startup-id picom &
 # run dunst
 exec_always --no-startup-id dunst &
 
-# set wallpaper with feh
-exec_always feh --bg-fill ~/.dotfiles/wallpapers/touhou/cirno-1.png
-
 # launch polybar
 exec_always --no-startup-id killall -q
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# launch copy
-exec copyq
-
-# launch flameshot
-exec flameshot
-
 # start i3 components
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet 
 exec --no-startup-id copyq
+exec --no-startup-id flameshot 
 exec --no-startup-id blueman-applet
 exec --no-startup-id autotiling
-exec --no-startup-id /usr/bin/autobin
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id waypaper --backend feh --restore
 
 ### Shortcuts ###
 floating_modifier $mod
@@ -195,5 +188,4 @@ gaps inner 8
 gaps outer 0
     
 exec_always --no-startup-id libinput-gestures-setup start
-
-exec_always --no-startup-id xinput set-prop "ASUF1204:00 2808:0104 Touchpad" "libinput Disable While Typing Enabled" 0
+exec_always --no-startup-id xinput set-prop "FTCS0038:00 2808:0106 Touchpad" "libinput Disable While Typing Enabled" 0
