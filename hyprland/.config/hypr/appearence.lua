@@ -5,7 +5,12 @@ hl.config({
         gaps_in  = 5,
         gaps_out = 10,
 
-        border_size = 2,
+        border_size = 1,
+
+        snap = {
+            enabled = true,
+            respect_gaps = true
+        },
 
         col = {
             active_border   = { colors = {"rgb(9A0EE6)", "rgb(011A6A)", "rgb(48DB10)", "rgb(ff5733)"}, angle = 45 },
@@ -38,10 +43,23 @@ hl.config({
 
         blur = {
             enabled   = true,
-            size      = 3,
-            passes    = 3,
+            size      = 1,
+            passes    = 2,
             vibrancy  = 0.1696,
+            popups    = true,
+            variant = "haze",
         },
+
+        glow = {
+            enabled = true,
+            range = 15,
+            color = { colors = {"rgb(9A0EE6)", "rgb(011A6A)", "rgb(48DB10)", "rgb(ff5733)"}, angle = 45 },
+            color_inactive = 0xFFFFFF
+        }, 
+
+        wobble = {
+            enabled = true,
+        }
     },
 
     animations = {
