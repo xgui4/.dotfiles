@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Qtile (Wayland Generic Session)
+Comment=dbus-launch Qtile Session
+Exec=qtile start
+Type=Application
+Keywords=wm;tiling

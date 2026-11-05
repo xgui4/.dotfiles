@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Qtile (X11 Generic Session)
+Comment=dbus-launch Qtile Session
+Exec=qtile start
+Type=Application
+Keywords=wm;tiling

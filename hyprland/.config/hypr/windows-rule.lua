@@ -14,6 +14,27 @@ hl.window_rule({
     ["hyprbars:no_bar"] = true
 })
 
+
+hl.window_rule({
+    name  = "About Firefox Windows",
+    match = { title = "About Firefox"},
+    float = true,
+})
+
+
+hl.window_rule({
+    name  = "About Waterfox Windows",
+    match = { title = "About Waterfox"},
+    float = true,
+})
+
+
+hl.window_rule({
+    name  = "About librewolf Windows",
+    match = { title = "About Librewolf"},
+    float = true,
+})
+
 hl.window_rule({
     name  = "Picture-in-Picture mode (english)",
     match = { title = "Picture-in-Picture"},

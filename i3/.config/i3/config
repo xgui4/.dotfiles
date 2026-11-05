@@ -85,6 +85,7 @@ bindsym $mod+space focus mode_toggle
 
 # run lockscreen
 bindsym $mod+l exec i3lock
+bindsym $mod+crtl+l exec loginctl suspend
 
 # move workspaces between monitors
 bindsym $mod+b move workspace to output up

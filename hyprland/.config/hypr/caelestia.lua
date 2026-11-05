@@ -22,7 +22,7 @@ screenshotUtiliy = "hyprshot -m region" -- default screenshot utility
 
 -- Autostart applications for Hyprland
 
-h1.on("hyprland.start", function()
+hl.on("hyprland.start", function()
     hl.exec_cmd("swayosd-server")
     hl.exec_cmd("hypridle")
     hl.exec_cmd("copyq")
@@ -38,7 +38,7 @@ h1.on("hyprland.start", function()
     h1.exec_cmd("wl-paste --type text --watch cliphist store")
     h1.exec_cmd("wl-paste --type image --watch cliphist store")
     h1.exec_cmd("gnome-keyring-daemon --start --components=secrets")
-.end)
+end)
 
 -- ENVIRONMENT VARIABLES 
 
@@ -77,25 +77,19 @@ hl.env("_JAVA_AWT_WM_NONREPARENTING", "1")
 require("nvidia")
 
 -- LOOK AND FEEL 
-
 require("appearence")
 
 -- INPUT 
-
-require("input.conf")
+require("input")
 
 -- Permission 
-
 require("permission")
 
 -- KEYBINDINGS
-
 require("keybinding")
-
-hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd(screenshotUtiliy))
+hl.bind("Print", hl.dsp.exec_cmd(screenshotUtiliy))
 
 -- WINDOWS AND WORKSPACES
-
 require("windows-rule")
 
 -- Fix for apps 
@@ -108,7 +102,7 @@ hl.config({
 
 -- Plugins config 
 
-require("plugins")
+-- require("plugins")
 
 -- Caelestia Specific Config 
 

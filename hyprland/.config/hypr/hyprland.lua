@@ -1,5 +1,5 @@
 ----------------------------------------------------
--- Hyprland Config For Xgui4-OS 0.1.1 (Lua/Hyprland 0.55 Update)   ----
+-- Hyprland Config For Xgui4-OS 0.2.0 (Lua/Hyprland 0.57 Update)   ----
 --  By Xgui4                                   ----
 ----------------------------------------------------
 
@@ -39,8 +39,6 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("qs -c overview &")
     hl.exec_cmd("sleep 1 &&$HOME/.config/hypr/scripts/waybar_auto_hide &")
     hl.exec_cmd("waypaper --backend hyprpaper --restore &")
-    hl.exec_cmd("battery_notify.sh &") 
-    hl.exec_cmd("battery_warning.sh &")
 end)
 
 -------------------------------
